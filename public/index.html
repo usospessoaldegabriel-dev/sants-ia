@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SANTS IA</title><link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand"><div class="logo">S</div><div><b>SANTS IA</b><small>Sua assistente inteligente</small></div></div>
+      <button class="new-chat" id="newChat">＋ Nova conversa</button>
+      <div class="side-label">ESPAÇO DE TRABALHO</div>
+      <button class="project active">▣　Projeto Roblox</button>
+      <button class="project">⌘　Scripts Lua</button>
+      <div class="side-label">CONVERSAS</div>
+      <div id="history" class="history"></div>
+      <div class="sidebar-bottom"><span class="status-dot"></span> SANTS IA pronta</div>
+    </aside>
+    <main class="main">
+      <header><div class="mobile-brand">SANTS IA</div><span class="model">✦ IA conectada por API</span><button id="clear" class="icon-btn" title="Limpar conversa">⌫</button></header>
+      <section class="chat" id="chat">
+        <div class="welcome" id="welcome">
+          <div class="welcome-icon">✦</div>
+          <h1>Fala! Vamos criar algo <em>insano</em>.</h1>
+          <p>Sou a SANTS IA. Posso ajudar com seu mapa, rifle, scripts Lua e muito mais.</p>
+          <div class="suggestions">
+            <button data-prompt="Vamos melhorar o visual do meu rifle no Roblox Studio.">🔫　Melhorar meu rifle</button>
+            <button data-prompt="Me ajude a criar uma mira (crosshair) personalizada.">🎯　Criar uma crosshair</button>
+            <button data-prompt="Explique passo a passo como organizar meus scripts Lua.">💻　Organizar scripts Lua</button>
+          </div>
+        </div>
+      </section>
+      <div class="composer-wrap">
+        <div id="previews" class="previews"></div>
+        <form id="form" class="composer">
+          <label class="attach" for="images" title="Anexar imagens">＋</label>
+          <input id="images" type="file" accept="image/*" multiple hidden>
+          <textarea id="message" rows="1" placeholder="Mande uma mensagem para a SANTS IA..." required></textarea>
+          <button id="send" class="send" type="submit">➤</button>
+        </form>
+        <div class="disclaimer">Imagens: até 4 por mensagem, 5 MB cada. A análise usa sua cota da API.</div>
+      </div>
+    </main>
+  </div>
+  <script src="/app.js"></script>
+</body></html>

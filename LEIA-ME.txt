@@ -1,0 +1,26 @@
+SANTS IA — COMO RODAR
+
+1. Instale o Node.js LTS: https://nodejs.org
+2. Extraia esta pasta e abra um terminal dentro dela.
+3. Execute: npm install
+4. Copie .env.example para .env
+5. Coloque sua chave de API em OPENAI_API_KEY no arquivo .env.
+   Crie/gerencie a chave em https://platform.openai.com/api-keys
+6. Execute: npm start
+7. Abra http://localhost:3000 no navegador.
+
+O QUE JÁ FUNCIONA
+- Interface SANTS IA responsiva.
+- Chat ligado à API da OpenAI.
+- Envio de até 4 imagens por mensagem (5 MB cada) para análise visual.
+- Sugestões para continuar o projeto Roblox.
+
+IMPORTANTE
+- Sua chave é privada: nunca compartilhe o arquivo .env nem publique a chave no navegador.
+- O uso da API é cobrado separadamente e não está incluído na assinatura do ChatGPT.
+- Não existe envio/uso ilimitado garantido: há limites de tamanho, cota, velocidade e custos da API
+  e do servidor. Esta versão limita cada mensagem a 4 imagens de até 5 MB.
+- O projeto roda localmente no seu computador. Para virar um site público, você precisa hospedá-lo
+  em um serviço de hospedagem e configurar HTTPS, autenticação, proteção contra abuso e armazenamento.
+- O modelo padrão está em OPENAI_MODEL no .env; troque pelo nome de um modelo de visão disponível
+  na sua conta da API se necessário.
