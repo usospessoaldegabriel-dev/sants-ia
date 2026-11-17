@@ -47,7 +47,7 @@ app.post("/api/chat", async (req, res) => {
       if (role === "user" && Array.isArray(m.images) && m.images.length) {
         const content = [{ type: "input_text", text: text || "Analise as imagens e me ajude com elas." }];
         for (const image of m.images.slice(0, 4)) {
-          if (typeof image === "string" && /^data:image\\/(png|jpeg|jpg|webp|gif);base64,/.test(image)) {
+          if (typeof image === "string" && /^data:image\/(png|jpeg|jpg|webp|gif);base64,/.test(image)) {
             content.push({ type: "input_image", image_url: image });
           }
         }
